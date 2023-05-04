@@ -1,0 +1,261 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000;
+    color: white;
+    font-family: Poppins;
+    font-size: 18px;
+    height: 100svh;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+h2{
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+}
+
+.sidebar{
+    height: 88%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1%;
+}
+
+[class*="side-"]{
+    background-color: #121212;
+    width: 100%;
+    padding: 5% 7%;
+    margin: 1.1% 0;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition: color 0.25s ease;
+}
+
+.side-1{height: 22%;}
+.side-2{height: 78%;}
+
+.side-1 a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5%;
+    margin: 1% 0;
+    color: #a6a6a6;
+}
+
+.side-1 a:first-child{
+    color: white;
+}
+
+.side-1 a span{
+    font-size: 25px;
+}
+
+.side-2 .lib-nav .top div{
+    display: flex;
+    align-items: center;
+}
+
+.side-2 .lib-nav .top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #a6a6a6;
+}
+
+.main{
+    margin-top: 18px;
+    height: 100%;
+}
+
+.container{
+    background:linear-gradient(160deg, #4b0e0e -10%, #121212 100%) ;
+    height: 83%;
+    border-radius: 6px;
+    padding: 1% 2.5%;
+}
+
+.main .container div{
+    margin: 0;
+    padding: 0;
+}
+
+.main .container .controls{
+    margin: 0.6% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .container .controls .nav button{
+    padding: 0;
+    color: #fff;
+    background-color: #000000ae;
+    opacity: 0.6;
+    border-radius: 100px;
+    box-shadow: none;
+    border: none;
+    height: 35px;
+    width: 35px;
+}
+
+.main .container .controls .nav button:first-child{
+    opacity: 1;
+}
+
+.main .container .controls .profile img{
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    border: solid 4px #0000007e;
+}
+
+.main .container .recommended{
+    margin: 2% 0;
+}
+
+.main .container .recommended ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 12px;
+}
+
+.main .container .recommended ul li{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #dddddd22;
+    padding-right: 3%;
+    height: 60px;
+    min-width: 180px;
+    width: 30%;
+    border-radius: 3px;
+    box-shadow: 0 0 20px #0000003d;
+    transition: color 0.25s ease;
+}
+
+.main .container .recommended ul li img{
+    height: 100%;
+    border-radius: 3px 0px 0px 3px;
+    box-shadow: 0 0 10px #0000007e;
+}
+
+.main .container .recommended ul li .play span{
+    display: none;
+    color: #1bc458;
+    font-size: 40px;
+}
+
+.main .container .recommended ul li:hover{
+    background-color: #dddddd66;
+}
+
+.main .container .recommended ul li:hover .play span{
+    display: flex;
+    position: relative;
+    left: 1.8vw;
+}
+
+.player{
+    height: 12%;
+    width: 100%;
+    background-color: #000000;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+    font-size: 10px;
+}
+
+.player .left{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.player .left img{
+    height: 50px;
+    width: 50px;
+    border-radius: 6px;
+}
+
+.player .left div{
+    display: flex;
+    flex-direction: column;
+}
+
+.player .left div h2{
+    margin: 0;
+    padding: 0;
+}
+
+.player .left div p{
+    margin: 0;
+    padding: 0;
+    color: #a6a6a6;
+}
+
+.player .left button span{
+    font-size: 18px;
+    color: #1bc458;
+}
+
+.player .center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player .center .bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
