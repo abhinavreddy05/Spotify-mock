@@ -11,13 +11,15 @@ body{
     font-size: 18px;
     height: 100svh;
     overflow: hidden;
+    padding: 0;
+    margin: 0;
 }
 
 ::-webkit-scrollbar{
     display: none;
 }
 
-h2{
+h2, h3{
     margin: 0;
     padding: 0;
 }
@@ -56,7 +58,7 @@ a{
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 1%;
+    padding: 2vh;
 }
 
 [class*="side-"]{
@@ -68,11 +70,10 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    transition: color 0.25s ease;
 }
 
-.side-1{height: 22%;}
-.side-2{height: 78%;}
+.side-1{height: 22%; margin: 0;}
+.side-2{height: 78%; margin: 0;}
 
 .side-1 a{
     display: flex;
@@ -81,14 +82,23 @@ a{
     gap: 5%;
     margin: 1% 0;
     color: #a6a6a6;
+    transition: all 0.25s ease;
 }
 
-.side-1 a:first-child{
+.side-1 a:hover{
     color: white;
 }
 
 .side-1 a span{
     font-size: 25px;
+}
+
+.side-1 .current{
+    color: white;
+}
+
+.side-1{
+    margin-bottom: 2vh;
 }
 
 .side-2 .lib-nav .top div{
@@ -105,15 +115,17 @@ a{
 }
 
 .main{
-    margin-top: 18px;
+    margin-top: 2vh;
     height: 100%;
 }
 
 .container{
-    background:linear-gradient(160deg, #4b0e0e -10%, #121212 100%) ;
+    background-image:linear-gradient(180deg, #4b0e0e 0%, #121212 60%);
     height: 83%;
     border-radius: 6px;
     padding: 1% 2.5%;
+    overflow-y: overlay;
+    overflow-x: hidden;
 }
 
 .main .container div{
@@ -140,7 +152,7 @@ a{
     width: 35px;
 }
 
-.main .container .controls .nav button:first-child{
+.main .container .controls .nav button:hover{
     opacity: 1;
 }
 
@@ -149,6 +161,10 @@ a{
     height: 35px;
     border-radius: 100px;
     border: solid 4px #0000007e;
+}
+
+.main .container .controls .profile img:hover{
+    border-width: 5px;
 }
 
 .main .container .recommended{
@@ -172,12 +188,12 @@ a{
     gap: 20px;
     background-color: #dddddd22;
     padding-right: 3%;
-    height: 60px;
+    height: 12vh;
     min-width: 180px;
     width: 30%;
     border-radius: 3px;
     box-shadow: 0 0 20px #0000003d;
-    transition: color 0.25s ease;
+    transition: all 0.4s ease;
 }
 
 .main .container .recommended ul li img{
@@ -189,7 +205,7 @@ a{
 .main .container .recommended ul li .play span{
     display: none;
     color: #1bc458;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .main .container .recommended ul li:hover{
@@ -202,6 +218,89 @@ a{
     left: 1.8vw;
 }
 
+.main .container .mixes {
+    margin-top: 6vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main .container .mixes div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .container .mixes div{
+    margin-bottom: 3vh;
+}
+
+.main .container .mixes div h3{
+    font-size: 20px;
+}
+
+.main .container .mixes div h3:hover{
+    text-decoration: underline;
+}
+
+.main .container .mixes div a{
+    margin: 0;
+    padding: 0;
+    color: #a6a6a6;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.main .container .mixes div a:hover{
+    text-decoration: underline;
+}
+
+.main .container .mixes ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0;
+    margin: 0;
+    gap: 3%;
+}
+
+.main .container .mixes ul li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #181818;
+    padding: 16px;
+    border-radius: 6px;
+    transition: all 0.4s ease;
+}
+
+.main .container .mixes ul li:hover{
+    background-color: #282828;
+}
+
+.main .container .mixes ul li img{
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 0 20px #0000007e;
+}
+
+.main .container .mixes ul li h3{
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+.main .container .mixes ul li p{
+    font-size: 12px;
+    color: #a6a6a6;
+    margin: 0;
+    padding: 0;
+}
+
 .player{
     height: 12%;
     width: 100%;
@@ -211,8 +310,9 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1%;
+    padding: 0 2%;
     font-size: 10px;
+    z-index: 99;
 }
 
 .player .left{
