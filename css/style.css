@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+@font-face {
+    font-family: "Gotham";
+    src: url("../font/GothamMedium.ttf");
+}
+
 *{
     box-sizing: border-box;
 }
@@ -7,7 +12,7 @@
 body{
     background-color: #000000;
     color: white;
-    font-family: Poppins;
+    font-family: Gotham;
     font-size: 18px;
     height: 100svh;
     overflow: hidden;
@@ -101,6 +106,14 @@ a{
     margin-bottom: 2vh;
 }
 
+.side-2{
+    padding: 1% 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: space-between;
+}
+
 .side-2 .lib-nav .top div{
     display: flex;
     align-items: center;
@@ -109,14 +122,52 @@ a{
 .side-2 .lib-nav .top{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     color: #a6a6a6;
+}
+
+.side-2 .lib-nav .top div{
+    display: flex;
+    gap: 1vw;
+}
+
+.side-2 .lib-nav .top div .libico{
+    fill: #a6a6a6;
+}
+
+.side-2 .lib-nav .top .lib-ico{
+    display: flex;
+    gap: 2vw;
+}
+
+.side-2 .lib-nav .bottom ul{
+    padding: 0;
+    margin: 1% 0;
+    list-style: none;
+    display: flex;
+    overflow-x: scroll;
+    gap: 1vw;
+    font-size: 0.8rem;
+}
+
+.side-2 .lib-nav .bottom ul li{
+    padding: 10px;
+    margin: 0;
+    background-color: #282828;
+    border-radius: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.side-2 .lib-nav .bottom ul li:last-child{
+    opacity: 0.6;
 }
 
 .main{
     margin-top: 2vh;
     height: 100%;
+    padding-right: 1vw;
 }
 
 .container{
@@ -167,8 +218,12 @@ a{
     border-width: 5px;
 }
 
+.main .container h2{
+    margin: 3% 0;
+}
+
 .main .container .recommended{
-    margin: 2% 0;
+    margin: 3% 0;
 }
 
 .main .container .recommended ul{
@@ -188,7 +243,7 @@ a{
     gap: 20px;
     background-color: #dddddd22;
     padding-right: 3%;
-    height: 12vh;
+    height: 10vh;
     min-width: 180px;
     width: 30%;
     border-radius: 3px;
@@ -299,6 +354,36 @@ a{
     color: #a6a6a6;
     margin: 0;
     padding: 0;
+}
+
+.main .container .footer .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 5% 0;
+    padding-bottom: 5%;
+    border-bottom: solid 0.5px #a6a6a68f;
+}
+
+.main .container .footer .top h4{
+    font-size: 15px;
+    margin: 6% 0;
+    padding: 0;
+}
+
+.main .container .footer .top ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.main .container .footer .top .col-2 ul li a{
+    color: #a6a6a6;
 }
 
 .player{
