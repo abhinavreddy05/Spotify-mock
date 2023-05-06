@@ -24,7 +24,7 @@ body{
     display: none;
 }
 
-h2, h3{
+h2, h3, h4{
     margin: 0;
     padding: 0;
 }
@@ -158,11 +158,112 @@ a{
     border-radius: 40px;
     margin-top: auto;
     margin-bottom: auto;
+    transition: all 0.25s ease;
+}
+
+.side-2 .lib-nav .bottom ul li:hover{
+    background-color: #323232;
 }
 
 .side-2 .lib-nav .bottom ul li:last-child{
     opacity: 0.6;
 }
+
+.side-2 .lib-nav .bottom div{
+    margin: 5% 0;
+    color: #a6a6a6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-2 .lib-nav .bottom div button{
+    font-size: 14px;
+    color: #a6a6a6;
+    display: flex;
+    align-items: center;
+}
+
+.side-2 .lib{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.side-2 .lib .card {
+    padding: 10px 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.25s ease;
+}
+
+.side-2 .lib .card:hover{
+    background-color: #282828;
+    border-radius: 6px;
+}
+
+.side-2 .lib .card img{
+    height: 8vh;
+    border-radius: 3px;
+    box-shadow: 0 0 20px #0000007e;
+}
+
+.side-2 .lib .card .artist{
+    border-radius: 100%;
+}
+
+.side-2 .lib .card div{
+    margin: 0 4%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.side-2 .lib .card div h4{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+}
+
+.side-2 .lib .card div div{
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.side-2 .lib .card div div ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    gap: 6px;
+}
+
+.side-2 .lib .card div div span{
+    color: #1bc458;
+    font-size: 14px;
+    transform: rotateZ(50deg);
+}
+
+.side-2 .lib .card div div ul li{
+    padding: 0;
+    margin: 0;
+    color: #a6a6a6;
+    display: flex;
+}
+
+
 
 .main{
     margin-top: 2vh;
@@ -359,7 +460,7 @@ a{
 .main .container .footer .top{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin: 5% 0;
     padding-bottom: 5%;
@@ -368,7 +469,7 @@ a{
 
 .main .container .footer .top h4{
     font-size: 15px;
-    margin: 6% 0;
+    margin: 8% 0;
     padding: 0;
 }
 
@@ -379,7 +480,7 @@ a{
     font-size: 14px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
 }
 
 .main .container .footer .top .col-2 ul li a{
@@ -391,13 +492,15 @@ a{
     width: 100%;
     background-color: #000000;
     position: fixed;
+    left: 0;
     bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
     padding: 0 2%;
     font-size: 10px;
     z-index: 99;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .player .left{
@@ -415,11 +518,13 @@ a{
 .player .left div{
     display: flex;
     flex-direction: column;
+    gap: 8px;
 }
 
 .player .left div h2{
     margin: 0;
     padding: 0;
+    font-weight: 300;
 }
 
 .player .left div p{
